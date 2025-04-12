@@ -58,3 +58,11 @@ h1, h2 {
   color: var(--text-heading);
   font: var(--heading-sm);
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
