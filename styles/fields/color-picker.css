@@ -1,0 +1,59 @@
+.color-picker {
+  margin-bottom: 1.75rem;
+
+  & > label {
+    margin-bottom: 1rem;
+  }
+
+  .radio-wrapper {
+    display: grid;
+    gap: .75rem;
+    grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
+  }
+
+  .radio-inner {
+    align-items: center;
+    background-color: var(--shape-button);
+    border-radius: 50%;
+    display: flex;
+    height: 2.5rem;
+    justify-content: center;
+    padding: .375rem;
+    position: relative;
+    width: 2.5rem;
+
+    & input,
+    & input:focus,
+    & input:hover {
+      all: unset;
+      inset: 0;
+      position: absolute;
+    }
+
+    .paintbrush {
+      border-radius: 50%;
+      height: 1.75rem;
+      width: 1.75rem;
+
+      &#paintbrush-light-blue { background-color: var(--brand-light); }
+      &#paintbrush-navy { background-color: var(--accent-navy); }
+      &#paintbrush-purple { background-color: var(--accent-purple); }
+      &#paintbrush-fuschia { background-color: var(--accent-fuschia); }
+      &#paintbrush-pink { background-color: var(--accent-pink); }
+      &#paintbrush-danger { background-color: var(--danger); }
+      &#paintbrush-orange { background-color: var(--accent-orange); }
+      &#paintbrush-yellow { background-color: var(--accent-yellow); }
+      &#paintbrush-lime { background-color: var(--accent-lime); }
+      &#paintbrush-green { background-color: var(--accent-green); }
+      &#paintbrush-cyan { background-color: var(--accent-cyan); }
+    }
+
+    &:hover, &:focus-within {
+      background-color: var(--shape-hover);
+    }
+
+    &:has(:checked) {
+      outline: 2px solid var(--brand-light);
+    }
+  }
+}

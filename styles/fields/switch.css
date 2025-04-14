@@ -1,0 +1,62 @@
+.switch-wrapper {
+  align-items: center;
+  display: flex;
+  height: 3rem;
+
+  .switch {
+    align-items: center;
+    display: flex;
+    gap: .75rem;
+    position: relative;
+  
+    & input,
+    & input:focus,
+    & input:hover {
+      all: unset;
+      inset: 0;
+      position: absolute;
+    }
+  
+    & #button {
+      background-color: var(--input-stroke);
+      border: 0;
+      border-radius: 50%;
+      height: 1.5rem;
+      left: .25rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: 1.5rem;
+    }
+  
+    & #slider {
+      background-color: var(--input-base);
+      border: 1px solid var(--input-stroke);
+      border-radius: 999px;
+      height: 2rem;
+      width: 4rem;
+    }
+  
+    &::after {
+      color: var(--text-heading);
+      content: "Escuro";
+      font: var(--text-sm);
+    }
+  
+    &:has(:checked) {
+      & #button { 
+        background-color: var(--text-heading);
+        left: 2.25rem;
+      }
+  
+      & #slider {
+        background-color: var(--brand-light);
+      }
+  
+      &::after {
+        content: "Claro";
+      }
+    }
+  }
+}
