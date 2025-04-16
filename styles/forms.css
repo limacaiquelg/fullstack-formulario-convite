@@ -4,6 +4,7 @@ fieldset {
   border: none;
   display: grid;
   gap: 1rem;
+  margin-bottom: 3rem;
 }
 
 .fieldset-legend {
@@ -18,7 +19,37 @@ fieldset {
   }
 }
 
-fieldset + fieldset {
-  margin-top: 3rem;
+.policy-agreement {
+  border-top: 1px solid var(--input-stroke);
+  gap: .25rem;
+  padding-top: 2.5rem;
 }
 
+.actions-wrapper {
+  & button {
+    all: unset;
+    align-items: center;
+    background-color: var(--brand-dark);
+    border-radius: .5rem;
+    display: flex;
+    gap: .75rem;
+    height: 3rem;
+    justify-content: center;
+    margin-left: auto;
+    padding: .25rem 1.25rem;
+
+    & svg {
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+
+    & span {
+      color: var(--text-heading);
+      font: 600 1rem var(--font-family);
+    }
+
+    &:hover, &:focus {
+      background-color: var(--brand-mid);
+    }
+  }
+}
