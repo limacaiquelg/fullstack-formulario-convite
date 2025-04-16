@@ -9,6 +9,8 @@ function fileInputHandler() {
     errorMessage.style.display = "none";
   } else {
     fileName.textContent = "Nenhum arquivo selecionado";
+    fileName.classList.remove('file-selected');
+    errorMessage.style.display = "flex";
   }
 }
 
